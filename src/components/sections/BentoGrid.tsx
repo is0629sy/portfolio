@@ -33,7 +33,7 @@ const items = [
 
 const skills = [
     "Next.js", "React", "TypeScript", "Tailwind CSS",
-    "Excel VBA", "GAS", "Python", "AI Prompting", "Git"
+    "Excel VBA", "GAS", "AI Prompting", "Git"
 ];
 
 export default function BentoGrid() {

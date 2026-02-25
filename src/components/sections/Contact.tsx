@@ -26,7 +26,7 @@ export default function Contact() {
                         <div className="bg-white rounded-2xl border border-border p-8 space-y-4">
                             {/* Email */}
                             <a
-                                href="mailto:contact@is0629sy.com"
+                                href="mailto:is0629sy.freedom180@gmail.com"
                                 className="group flex items-center gap-4 p-4 rounded-xl hover:bg-indigo-50/50 transition-all duration-300"
                             >
                                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
@@ -34,7 +34,7 @@ export default function Contact() {
                                 </div>
                                 <div className="flex-1">
                                     <p className="text-sm font-bold text-foreground">Email</p>
-                                    <p className="text-sm text-muted">contact@is0629sy.com</p>
+                                    <p className="text-sm text-muted">is0629sy.freedom180@gmail.com</p>
                                 </div>
                                 <ArrowUpRight
                                     size={18}

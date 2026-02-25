@@ -9,7 +9,7 @@ const services = [
         title: "Web制作・コーディング代行",
         description:
             "Next.js / Tailwind CSS を用いたモダンなWebサイト・Webアプリケーションの設計・開発。レスポンシブ対応、SEO最適化、高速表示を標準装備。",
-        tags: ["Next.js", "Tailwind CSS", "TypeScript"],
+        tags: ["HTML", "CSS", "JavaScript", "Next.js", "TypeScript"],
     },
     {
         icon: FileSpreadsheet,
@@ -23,7 +23,7 @@ const services = [
         title: "AI導入・コーディング伴走サポート",
         description:
             "AIツールの導入支援から、プロンプトエンジニアリング、AIを活用したコーディングの伴走サポートまで。初心者の方でも安心。",
-        tags: ["AI Prompting", "ChatGPT", "Copilot"],
+        tags: ["AI Prompting", "ChatGPT", "Gemini", "Claude"],
     },
 ];
 
