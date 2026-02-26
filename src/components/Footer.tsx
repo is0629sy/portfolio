@@ -11,7 +11,11 @@ export default function Footer() {
                     is0629sy.com
                 </a>
                 <p className="text-sm text-muted-light">
-                    &copy; {new Date().getFullYear()} is0629sy. All rights reserved.
+                    &copy; {(() => {
+                        const currentYear = new Date().getFullYear();
+                        const startYear = 2026;
+                        return currentYear === startYear ? startYear : `${startYear}-${currentYear}`;
+                    })()} is0629sy. All rights reserved.
                 </p>
             </div>
         </footer>
