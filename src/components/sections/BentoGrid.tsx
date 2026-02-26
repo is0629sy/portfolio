@@ -24,8 +24,8 @@ const items = [
         className: "md:col-span-1 md:row-span-1 bg-accent/5",
     },
     {
-        title: "Specialist Info",
-        description: "基本情報技術者・全商1級保持の信頼性。",
+        title: "Certified Engineer Info",
+        description: "基本情報技術者資格に裏打ちされた専門性。",
         icon: Cpu,
         className: "md:col-span-1 md:row-span-1 border-indigo-100",
     },
