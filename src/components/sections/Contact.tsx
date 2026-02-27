@@ -167,7 +167,7 @@ export default function Contact() {
                             <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-border p-6 sm:p-8 space-y-6 shadow-sm">
                                 <div className="space-y-1.5">
                                     <label htmlFor="name" className="text-sm font-medium text-foreground">
-                                        お名前
+                                        お名前 <span className="text-red-500">*</span>
                                     </label>
                                     <input
                                         type="text"
@@ -184,7 +184,7 @@ export default function Contact() {
 
                                 <div className="space-y-1.5">
                                     <label htmlFor="email" className="text-sm font-medium text-foreground">
-                                        メールアドレス
+                                        メールアドレス <span className="text-red-500">*</span>
                                     </label>
                                     <input
                                         type="email"
@@ -201,7 +201,7 @@ export default function Contact() {
 
                                 <div className="space-y-1.5">
                                     <label htmlFor="message" className="text-sm font-medium text-foreground">
-                                        メッセージ
+                                        メッセージ <span className="text-red-500">*</span>
                                     </label>
                                     <textarea
                                         id="message"
