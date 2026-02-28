@@ -48,8 +48,8 @@ export default function Service() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     {services.map((service, index) => (
                         <FadeIn key={service.title} delay={0.1 * (index + 1)}>
-                            <div className="group relative bg-white rounded-2xl p-8 border border-border hover:border-accent/20 hover:shadow-xl hover:shadow-cyan-500/5 transition-all duration-500 hover:-translate-y-1 h-full">
-                                <div className="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-cyan-50 text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                            <div className="group relative bg-white rounded-2xl p-8 border border-border hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5 transition-all duration-500 hover:-translate-y-1 h-full">
+                                <div className="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                                     <service.icon size={24} />
                                 </div>
                                 <h3 className="text-lg font-bold text-foreground mb-3">
@@ -62,7 +62,7 @@ export default function Service() {
                                     {service.tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="px-2.5 py-1 text-xs font-medium text-accent bg-cyan-50 rounded-md"
+                                            className="px-2.5 py-1 text-xs font-medium text-accent bg-accent/10 rounded-md"
                                         >
                                             {tag}
                                         </span>
