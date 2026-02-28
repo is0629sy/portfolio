@@ -34,9 +34,9 @@ export default function Header() {
                     {/* Logo */}
                     <a
                         href="/"
-                        className="text-lg font-bold tracking-tight text-foreground font-mono"
+                        className="flex items-center gap-2"
                     >
-                        <span className="text-accent">is</span>0629sy
+                        <img src="/img/logo.png" alt="is0629sy" className="h-8 w-auto" />
                     </a>
 
                     {/* Desktop Nav */}
