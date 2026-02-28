@@ -1,10 +1,11 @@
-"use client";
-
 import FadeIn from "@/components/FadeIn";
 import WorkCard from "@/components/WorkCard";
-import { works } from "@/data/works";
+import { getWorks } from "@/lib/notion";
 
-export default function Works() {
+// Server Componentとして非同期でデータを取得
+export default async function Works() {
+    const works = await getWorks();
+
     return (
         <section id="works" className="py-28 sm:py-32">
             <div className="mx-auto max-w-6xl px-6 lg:px-8">
@@ -25,7 +26,7 @@ export default function Works() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {works.map((work, index) => (
                         <FadeIn key={work.id} delay={0.1 * (index + 1)}>
-                            <WorkCard work={work} />
+                            <WorkCard work={work} index={index + 1} />
                         </FadeIn>
                     ))}
                 </div>

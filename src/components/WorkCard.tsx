@@ -7,9 +7,10 @@ import { motion } from "framer-motion";
 
 interface WorkCardProps {
     work: Work;
+    index: number;
 }
 
-export default function WorkCard({ work }: WorkCardProps) {
+export default function WorkCard({ work, index }: WorkCardProps) {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [opacity, setOpacity] = useState(0);
     const cardRef = useRef<HTMLDivElement>(null);
@@ -42,27 +43,38 @@ export default function WorkCard({ work }: WorkCardProps) {
 
             {/* Thumbnail Area */}
             <div className="relative aspect-[16/10] bg-[#f8fafc] overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative">
-                        <div className="w-20 h-20 rounded-2xl bg-white shadow-xl flex items-center justify-center animate-pulse-slow">
-                            <span className="text-3xl font-black text-accent">{work.title.charAt(0)}</span>
-                        </div>
-                        <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-foreground flex items-center justify-center text-white text-[10px] font-bold">
-                            {work.techStack.length}+
+                {work.image ? (
+                    <img
+                        src={work.image}
+                        alt={work.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="relative">
+                            <div className="w-20 h-20 rounded-2xl bg-white shadow-xl flex items-center justify-center animate-pulse-slow">
+                                <span className="text-3xl font-black text-accent">{work.title.charAt(0)}</span>
+                            </div>
+                            <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-foreground flex items-center justify-center text-white text-[10px] font-bold">
+                                {work.techStack.length}+
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
 
                 {/* Abstract pattern overlay */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                     style={{ backgroundImage: 'radial-gradient(#000 0.5px, transparent 0.5px)', backgroundSize: '10px 10px' }} />
+
+                {/* Gradient Overlay for images */}
+                {work.image && <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />}
             </div>
 
             {/* Content */}
             <div className="flex flex-col flex-1 p-8">
                 <div className="flex items-center gap-2 mb-3">
                     <span className="text-[10px] font-bold tracking-widest uppercase text-accent bg-accent/5 px-2 py-0.5 rounded">
-                        Project / 0{work.id}
+                        Project / {index.toString().padStart(2, '0')}
                     </span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
