@@ -46,6 +46,16 @@ export const metadata: Metadata = {
     "開発者"
   ],
   metadataBase: new URL("https://is0629sy.com"),
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      // Googleなどのクローラー互換性のためにPNGも指定（ある場合）
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   alternates: {
     canonical: "/",
   },
