@@ -25,7 +25,7 @@ const items = [
     },
     {
         title: "Certified Engineer Info",
-        description: "基本情報技術者資格に裏打ちされた専門性。",
+        description: "基本情報技術者資格に裏打ちされた基礎力と専門性。",
         icon: Cpu,
         className: "md:col-span-1 md:row-span-1 border-indigo-100",
     },
